@@ -4,64 +4,51 @@ import { FaAngleDown } from "react-icons/fa6";
 import logo from '../../assets/img/logo.png'
 const Navbar = () => {
     return (
-        <div className="navbar overflow-hidden bg-[#45bdaa]">
-        <div className="navbar-start">
-            <img src={logo} className='w-20 h-18' alt="" />
-          <a className="btn btn-ghost text-white text-3xl font-bold">ReMedi</a>
-        </div>
-        <div className="navbar-center flex lg:gap-2 mr-8">
-          <div className="relative  shadow rounded-md">
-            <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-              <FaSearch className="text-[#45bdaa]" />
-            </span>
-            <input
-              type="text"
-              placeholder="     Search Medicine"
-              className="input w-48 lg:w-96"
-            />
-          </div>
-          <div className="dropdown z-10 max-w-lg">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn bg-white font-bold w-32 border-none shadow mr-8"
-            >
-              MENU
-              <span className="ml-6 text-[#45bdaa]">
-                <FaAngleDown size={20} />
-              </span>
-            </div>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-24 lg:w-52"
-            >
-              <li className="hover:text-orange-500 font-semibold">
-                <a>Home</a>
-              </li>
-              <li className="hover:text-orange-500 font-semibold">
-                <a>Details</a>
-              </li>
-              <li className="hover:text-orange-500 font-semibold">
-                <a>Category</a>
-              </li>
-              <li className="hover:text-orange-500 font-semibold">
-                <a>My Favorites</a>
-              </li>
-              <li className="hover:text-orange-500 font-semibold">
-                <a>Profile</a>
-              </li>
-              <li className="hover:text-orange-500 font-semibold">
-                <a>Log In/Sign Up</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="navbar-end hidden lg:flex">
-          <p className="bg-orange-600 rounded-full p-3 text-white text-xl font-bold">
-            <GoPerson />
-          </p>
-        </div>
+      
+<div className="navbar overflow-hidden bg-[#45bdaa]">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul className="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <img src={logo} className="w-20 h-14" alt="" />
+    <a className="  text-2xl font-bold text-white">ReMedi</a>
+  </div>
+  <div className="navbar-center  hidden lg:flex">
+    <ul className="menu menu-horizontal px-1">
+      <li><a>Item 1</a></li>
+      <li>
+        <details>
+          <summary>Parent</summary>
+          <ul className="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a>Item 3</a></li>
+    </ul>
+  </div>
+  <div className="navbar-end">
+   <button className="btn">
+  Inbox
+  <div className="badge badge-secondary">+99</div>
+</button>
+  </div>
+</div>
+     
     );
 };
 
