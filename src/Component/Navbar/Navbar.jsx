@@ -12,22 +12,22 @@ const Navbar = () => {
         <div className="navbar-center flex lg:gap-2 mr-8">
           <div className="relative  shadow rounded-md">
             <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-              <FaSearch className="text-orange-400" />
+              <FaSearch className="text-[#45bdaa]" />
             </span>
             <input
               type="text"
-              placeholder="     Search Audiobook"
+              placeholder="     Search Medicine"
               className="input w-48 lg:w-96"
             />
           </div>
-          <div className="dropdown max-w-lg">
+          <div className="dropdown z-10 max-w-lg">
             <div
               tabIndex={0}
               role="button"
               className="btn bg-white font-bold w-32 border-none shadow mr-8"
             >
               MENU
-              <span className="ml-6 text-orange-400">
+              <span className="ml-6 text-[#45bdaa]">
                 <FaAngleDown size={20} />
               </span>
             </div>
